@@ -3,7 +3,7 @@ const { ethers } = require("hardhat");
 
 describe("King", function () {
   let King, king;
-  let owner, alice, bob, carol, signers;
+  let owner, alice, signers;
 
   beforeEach(async function() {
     [owner, alice, bob, carol, signers] = await ethers.getSigners();
