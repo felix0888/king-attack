@@ -14,6 +14,11 @@ async function main() {
   const king = await King.deploy();
   console.log("King address: ", await king.address);
   console.log("Account balance after King deploy: ", (await deployer.getBalance()).toString());
+
+  const KingAttack = await ethers.getContractFactory("KingAttack");
+  const kingAttack = await KingAttack.deploy();
+  console.log("KingAttack address: ", await kingAttack.address);
+  console.log("Account balance after KingAttack deploy: ", (await deployer.getBalance()).toString());
 }
 
 // We recommend this pattern to be able to use async/await everywhere
