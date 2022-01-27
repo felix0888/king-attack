@@ -6,7 +6,7 @@ describe("King", function () {
   let owner, alice, signers;
 
   beforeEach(async function() {
-    [owner, alice, bob, carol, signers] = await ethers.getSigners();
+    [owner, alice, signers] = await ethers.getSigners();
     King = await ethers.getContractFactory("King");
     king = await King.deploy({value: ethers.utils.parseEther("10")});
   });
