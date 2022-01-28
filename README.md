@@ -122,7 +122,8 @@ npx hardhat run --network [NETWORK-NAME] scripts/deploy.js
 ```
 
 ### Test
-You have to see all the funds on `Reentrancy` contract are transfered to `ReentrancyAttack` contract.
+You have to see `KingAttack` contract has become the new king and any new spender(even more Ether than prize) can't replace that king.
+
 ```console
 npx hardhat test
 ```
